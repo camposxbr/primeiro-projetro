@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Mesmo head do jogos.html, alterando o título -->
+    <title>Consoles | GameCompany Store</title>
+    <!-- Links CSS iguais -->
+     <link rel="stylesheet" href="style.css">
+         <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar igual -->
+
+    <!-- Banner -->
+    <header class="bg-danger text-white text-center py-5">
+        <div class="container">
+            <h1>Consoles</h1>
+            <p class="lead">Colecione os melhores!</p>
+        </div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">GameCompany Store</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jogos.html#">Jogos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="consoles.html#">Consoles</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contatos.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href=""></a></li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <!-- Filtros (igual ao jogos.html) -->
+
+    <!-- Lista de Consoles -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row" id="products">
+                <!-- Preenchido via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer igual -->
+</body>
+</html>

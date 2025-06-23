@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato |GameCompany Store</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --dark: #2d3436;
+            --light: #f5f6fa;
+            --warning: #fdcb6e;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--light);
+            color: var(--dark);
+        }
+        
+        .retro-font {
+            font-family: 'Press Start 2P', cursive;
+        }
+        
+        .navbar {
+            background-color: var(--dark) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Press Start 2P', cursive;
+            font-size: 1.2rem;
+            color: var(--warning) !important;
+        }
+        
+        .banner-contact {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-form {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .contact-info {
+            background: var(--primary);
+            color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            height: 100%;
+        }
+        
+        .contact-info i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--warning);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #5649c0;
+            border-color: #5649c0;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--warning);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand retro-font" href="index.html">Game Conpany</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="jogos.html">Jogos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="consoles.html">Consoles</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contatos.html">Contato</a></li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#cartModal">
+                        <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Banner -->
+    <header class="banner-contact text-center">
+        <div class="container">
+            <h1 class="retro-font mb-3">CONTATO</h1>
+            <p class="lead">Tem dúvidas ou sugestões? Fale conosco!</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mb-5">
+        <div class="row g-4">
+            <!-- Formulário -->
+            <div class="col-lg-7">
+                <div class="contact-form">
+                    <h2 class="mb-4">Envie sua mensagem</h2>
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Assunto</label>
+                            <select class="form-select" id="subject" required>
+                                <option value="" selected disabled>Selecione um assunto</option>
+                                <option value="duvida">Dúvida</option>
+                                <option value="sugestao">Sugestão</option>
+                                <option value="reclamacao">Reclamação</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="fas fa-paper-plane me-2"></i> Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Informações de Contato -->
+            <div class="col-lg-5">
+                <div class="contact-info">
+                    <h2 class="mb-4"><i class="fas fa-info-circle"></i> Informações</h2>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-map-marker-alt"></i> Endereço</h5>
+                        <p>Rua dos Games, 123 - Centro<br>São Paulo/SP - CEP 01001-001</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-phone"></i> Telefone</h5>
+                        <p>(11) 9999-9999<br>(11) 8888-8888</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-envelope"></i> E-mail</h5>
+                        <p>contato@GameCompany.com.br<br>suporte@Gamegame.com.br</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-clock"></i> Horário de Atendimento</h5>
+                        <p>Segunda a Sexta: 9h às 18h<br>Sábado: 9h às 13h</p>
+                    </div>
+                    
+                    <h5 class="mb-3"><i class="fas fa-share-alt"></i> Redes Sociais</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mapa -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0754267452926!2d-46.6534269242396!3d-23.56573436179839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c8da0aa315%3A0xd59f9431f2c9776a!2sAv.%20Paulista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1689877729664!5m2!1spt-BR!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="retro-font">RetroGame Store</h5>
+                    <p>A melhor loja de jogos e consoles retro e atuais do Brasil!</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-white">Início</a></li>
+                        <li><a href="jogos.html" class="text-white">Jogos</a></li>
+                        <li><a href="consoles.html" class="text-white">Consoles</a></li>
+                        <li><a href="contato.html" class="text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Assine e receba nossas promoções!</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Seu e-mail">
+                        <button class="btn btn-warning" type="button">Assinar</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Company Store. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Carrinho -->
+    <div class="modal fade" id="cartModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-shopping-cart me-2"></i> Seu Carrinho</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart-empty" class="text-center py-4">
+                        <i class="fas fa-shopping-cart fa-4x mb-3 text-muted"></i>
+                        <h5>Seu carrinho está vazio</h5>
+                        <p class="text-muted">Navegue pela loja e adicione itens ao carrinho</p>
+                        <button class="btn btn-primary" data-bs-dismiss="modal">Continuar Comprando</button>
+                    </div>
+                    <div id="cart-items" style="display: none;">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Produto</th>
+                                        <th>Preço</th>
+                                        <th>Quantidade</th>
+                                        <th>Total</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cart-table-body">
+                                    <!-- Itens serão inseridos aqui via JavaScript -->
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3" class="text-end fw-bold">Total:</td>
+                                        <td id="cart-total" class="fw-bold">R$ 0,00</td>
+                                        <td></td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" id="cart-footer" style="display: none;">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar Comprando</button>
+                    <button type="button" class="btn btn-danger" onclick="clearCart()">
+                        <i class="fas fa-trash me-1"></i> Limpar Carrinho
+                    </button>
+                    <button type="button" class="btn btn-success" onclick="checkout()">
+                        <i class="fas fa-credit-card me-1"></i> Finalizar Compra
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript -->
+    <script>
+        // Simulação de carrinho
+        document.addEventListener('DOMContentLoaded', function() {
+            // Atualiza contador do carrinho
+            updateCartCount();
+            
+            // Formulário de contato
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
+                this.reset();
+            });
+        });
+        
+        function updateCartCount() {
+            // Simulação - normalmente você buscaria do localStorage
+            const count = 0; // Altere para testar
+            document.getElementById('cart-count').textContent = count;
+            
+            if (count > 0) {
+                document.getElementById('cart-empty').style.display = 'none';
+                document.getElementById('cart-items').style.display = 'block';
+                document.getElementById('cart-footer').style.display = 'flex';
+            } else {
+                document.getElementById('cart-empty').style.display = 'block';
+                document.getElementById('cart-items').style.display = 'none';
+                document.getElementById('cart-footer').style.display = 'none';
+            }
+        }
+        
+        function clearCart() {
+            // Simulação de limpar carrinho
+            if (confirm('Tem certeza que deseja limpar seu carrinho?')) {
+                alert('Carrinho limpo com sucesso!');
+                updateCartCount();
+            }
+        }
+        
+        function checkout() {
+            // Simulação de checkout
+            alert('Compra finalizada com sucesso! Obrigado por comprar na RetroGame Store.');
+            document.getElementById('cartModal').classList.remove('show');
+            document.querySelector('.modal-backdrop').remove();
+            updateCartCount();
+        }
+    </script>
+</body>
+</html>
