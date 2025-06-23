@@ -1,0 +1,46 @@
+/* Estilo personalizado */
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x600') no-repeat center center;
+    background-size: cover;
+}
+
+.card {
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+#cart-count {
+    background-color: red;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.8rem;
+}
+/* Páginas específicas */
+.bg-success, .bg-danger, .bg-warning {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), var(--bg-color) no-repeat center center;
+    background-size: cover;
+}
+
+.bg-success { --bg-color: url('https://via.placeholder.com/1920x600/28a745'); }
+.bg-danger  { --bg-color: url('https://via.placeholder.com/1920x600/dc3545'); }
+.bg-warning { --bg-color: url('https://via.placeholder.com/1920x600/ffc107'); }
+
+/* Formulário */
+form {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
